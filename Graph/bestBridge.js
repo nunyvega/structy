@@ -1,7 +1,4 @@
 const bestBridge = (grid) => {
-	const visited = new Set();
-	const queue = [];
-
 	const firstPieceOfLand = findFirstPieceOfLand(grid);
 	const firstIsland = findIsland(firstPieceOfLand, grid);
 	const shortestBirdgeDistance = findShortestBridge(firstIsland, grid);
