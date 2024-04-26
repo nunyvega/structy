@@ -7,14 +7,14 @@
 
 // Recursive
 const removeNode = (head, targetVal, prev = null) => {
-    if (head.val === targetVal && prev === null) return head.next
-    if (head.val === targetVal){
-      prev.next = head.next;
-    } else {
-      removeNode(head.next, targetVal, head)
-    }
-    return head;
-}
+	if (head.val === targetVal && prev === null) return head.next;
+	if (head.val === targetVal) {
+		prev.next = head.next;
+	} else {
+		removeNode(head.next, targetVal, head);
+	}
+	return head;
+};
 
 /* Iterative
 const removeNode = (head, targetVal) => {
@@ -31,5 +31,5 @@ const removeNode = (head, targetVal) => {
 };
 */
 module.exports = {
-  removeNode,
+	removeNode,
 };

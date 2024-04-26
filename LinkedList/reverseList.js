@@ -7,12 +7,11 @@
 
 //Approach Recursivo
 const reverseList = (head, prev = null) => {
-  if (head === null) return prev
-  const next = head.next // guardar termporalmente pa no perder
-  head.next = prev;
-  return reverseList(next, head)
-}
-
+	if (head === null) return prev;
+	const next = head.next; // guardar termporalmente pa no perder
+	head.next = prev;
+	return reverseList(next, head);
+};
 
 /*Approach iterativo
 const reverseList = (head) => {
@@ -27,7 +26,6 @@ const reverseList = (head) => {
   return prev
 }
 */
-
 
 /* hecho solo, pre ver videos
 const reverseList = (head) => {
@@ -51,5 +49,5 @@ const reverseList = (head) => {
 */
 
 module.exports = {
-  reverseList,
+	reverseList,
 };

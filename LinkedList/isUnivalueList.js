@@ -5,17 +5,16 @@
 //   }
 // }
 
-
 // Recursive
 const isUnivalueList = (head) => {
-    if (head.next === null) return true;
-    if (head.val === head.next.val){
-      return isUnivalueList(head.next)
-    }
-    return false;
-  }
-  
-  /* iterative
+	if (head.next === null) return true;
+	if (head.val === head.next.val) {
+		return isUnivalueList(head.next);
+	}
+	return false;
+};
+
+/* iterative
   const isUnivalueList = (head) => {
     // todo
     let value = head.val;
@@ -26,7 +25,6 @@ const isUnivalueList = (head) => {
     return true;
   };
   */
-  module.exports = {
-    isUnivalueList,
-  };
-  
+module.exports = {
+	isUnivalueList,
+};

@@ -18,8 +18,8 @@ const sumList = (head) => {
 */
 // Recursive solution 1
 const sumList = (head) => {
-  if (head == null) return 0
-  return head.val + sumList(head.next)
+	if (head == null) return 0;
+	return head.val + sumList(head.next);
 };
 /* Recursive solution 2
 const sumList = (head) => {
@@ -36,5 +36,5 @@ const calculate = (head, sum) => {
 
 */
 module.exports = {
-  sumList,
+	sumList,
 };

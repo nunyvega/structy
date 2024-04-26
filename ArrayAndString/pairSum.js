@@ -1,20 +1,18 @@
 const pairSum = (numbers, targetSum) => {
-    const numsObject = {}
-  
-    for ( let iter = 0; iter < numbers.length; iter++ ){
-      let complement = targetSum - numbers[iter];
-    
-      if (numsObject.hasOwnProperty(complement)){
-        return [numsObject[complement],iter]
-      } else {
-        numsObject[numbers[iter]] = iter
-      }
-    }
-  
-  }
-  
-  
-  /*const pairSum = (numbers, targetSum) => {
+	const numsObject = {};
+
+	for (let iter = 0; iter < numbers.length; iter++) {
+		let complement = targetSum - numbers[iter];
+
+		if (numsObject.hasOwnProperty(complement)) {
+			return [numsObject[complement], iter];
+		} else {
+			numsObject[numbers[iter]] = iter;
+		}
+	}
+};
+
+/*const pairSum = (numbers, targetSum) => {
     let left = 0;
     let right = 1;
     
@@ -39,7 +37,6 @@ const pairSum = (numbers, targetSum) => {
     
   };
   */
-  module.exports = {
-    pairSum,
-  };
-  
+module.exports = {
+	pairSum,
+};

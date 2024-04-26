@@ -1,10 +1,10 @@
 class Node {
-    constructor(val) {
-      this.val = val;
-      this.next = null;
-    }
-  }
-  /* Recursive
+	constructor(val) {
+		this.val = val;
+		this.next = null;
+	}
+}
+/* Recursive
   const createLinkedList = (values) => {
     
       if (values.length == 0 ) return null;
@@ -14,7 +14,7 @@ class Node {
       return currentNode; 
   }
    */
-  /* Iterative 1
+/* Iterative 1
   const createLinkedList = (values) => {
     if (values.length == 0 ) return null;
     let currentNode = new Node(values[0])
@@ -27,20 +27,19 @@ class Node {
   
     return origin;
   };
-  */ 
-  // Iterative 2
-  const createLinkedList = ( values ) => {
-    let dummyNode = new Node (null)
-    let tail = dummyNode
-    for (val of values){
-      let newNode = new Node(val)
-      tail.next = newNode;
-      tail = tail.next;
-    }
-  
-      return dummyNode.next;
-  }
-  module.exports = {
-    createLinkedList,
-  };
-  
+  */
+// Iterative 2
+const createLinkedList = (values) => {
+	let dummyNode = new Node(null);
+	let tail = dummyNode;
+	for (val of values) {
+		let newNode = new Node(val);
+		tail.next = newNode;
+		tail = tail.next;
+	}
+
+	return dummyNode.next;
+};
+module.exports = {
+	createLinkedList,
+};

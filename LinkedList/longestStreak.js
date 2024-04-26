@@ -6,18 +6,18 @@
 // }
 
 // Recursive
-const longestStreak = (head, currentValue = null, count = 0, longest = 0) =>{
-    if (head === null) return longest    
-    if (currentValue !== head.val){
-        count = 0;
-        currentValue = head.val;
-      }
-    count++;
-      if ( count > longest) longest = count;
-      return longestStreak(head.next, currentValue, count, longest)
-  }
-  
-  /* Iterative
+const longestStreak = (head, currentValue = null, count = 0, longest = 0) => {
+	if (head === null) return longest;
+	if (currentValue !== head.val) {
+		count = 0;
+		currentValue = head.val;
+	}
+	count++;
+	if (count > longest) longest = count;
+	return longestStreak(head.next, currentValue, count, longest);
+};
+
+/* Iterative
   const longestStreak = (head) => {
     let count = 0
     let longest = 0;
@@ -34,7 +34,6 @@ const longestStreak = (head, currentValue = null, count = 0, longest = 0) =>{
     return longest;
   };
   */
-  module.exports = {
-    longestStreak,
-  };
-  
+module.exports = {
+	longestStreak,
+};

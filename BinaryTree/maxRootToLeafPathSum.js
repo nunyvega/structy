@@ -8,13 +8,13 @@
 
 // Recursive
 const maxPathSum = (root) => {
-    if (root === null) return -Infinity
-    if(root.left === null && root.right === null) return root.val
-    const l = maxPathSum(root.left)
-    const r = maxPathSum(root.right)
-    return root.val + Math.max(l,r)
-  }
-  /*
+	if (root === null) return -Infinity;
+	if (root.left === null && root.right === null) return root.val;
+	const l = maxPathSum(root.left);
+	const r = maxPathSum(root.right);
+	return root.val + Math.max(l, r);
+};
+/*
   const maxPathSum2 = (root) => {
     // todo
     const stack = [root]
@@ -25,7 +25,6 @@ const maxPathSum = (root) => {
     }
   };
   */
-  module.exports = {
-    maxPathSum,
-  };
-  
+module.exports = {
+	maxPathSum,
+};

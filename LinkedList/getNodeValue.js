@@ -7,10 +7,10 @@
 
 //Recursive solution 1
 const getNodeValue = (head, index) => {
-    if (head === null) return null
-    if (index === 0) return head.val
-    return getNodeValue(head.next, index-1)
-}
+	if (head === null) return null;
+	if (index === 0) return head.val;
+	return getNodeValue(head.next, index - 1);
+};
 
 /* Recursive solution 2
 const getNodeValue = (head, index) => {
@@ -37,5 +37,5 @@ const getNodeValue = (head, index) => {
 */
 
 module.exports = {
-  getNodeValue,
+	getNodeValue,
 };
