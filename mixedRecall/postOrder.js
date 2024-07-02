@@ -6,7 +6,16 @@
 //   }
 // }
 
-const postOrder = (root) => {
+const postOrder = (root, orders = []) => {
+	if (!root) return orders;
+	orders.unshift(root.val);
+	postOrder(root.right, orders);
+	postOrder(root.left, orders);
+
+	return orders;
+};
+
+const postOrderStack = (root) => {
 	if (!root || root.length == 0) return [];
 	const orders = [];
 	const stack = [];
