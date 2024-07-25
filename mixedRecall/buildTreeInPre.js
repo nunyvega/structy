@@ -21,6 +21,38 @@ class Node {
     return root;
   };
   
+
+    // recursive in place
+    const buildTreeInPreInPlace = (
+        inOrder, 
+        preOrder, 
+        inOrderStart = 0, 
+        inOrderEnd = inOrder.length - 1, 
+        preOrderStart = 0, 
+        preOrderEnd = preOrder.length - 1) => {
+          if (inOrderEnd < inOrderStart) return null;
+          const value = preOrder[preOrderStart];
+          const root = new Node(value);
+          const mid = inOrder.indexOf(value);
+          const leftSize = mid - inOrderStart;
+          root.left = buildTreeInPre(
+            inOrder, 
+            preOrder, 
+            inOrderStart, 
+            mid - 1, 
+            preOrderStart + 1, 
+            preOrderStart + leftSize
+          );
+          root.right = buildTreeInPre(
+            inOrder, 
+            preOrder, 
+            mid + 1, 
+            inOrderEnd, 
+            preOrderStart + leftSize + 1, 
+            preOrderEnd
+          );
+          return root;
+      };
   
   module.exports = {
     buildTreeInPre,
